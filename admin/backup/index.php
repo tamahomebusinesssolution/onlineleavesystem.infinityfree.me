@@ -45,8 +45,8 @@
         </button> -->
         <?php
         $date = date('Ymd-His'); 
-        $con = mysqli_connect("localhost","root","","leave_db");
-        // $con = mysqli_connect("sql100.infinityfree.com","if0_40290637","NxaTOZQNH28PVR","if0_40290637_leave_db");
+        // $con = mysqli_connect("localhost","root","","leave_db");
+        $con = mysqli_connect("sql100.infinityfree.com","if0_40290637","NxaTOZQNH28PVR","if0_40290637_leave_db");
         if(isset($_POST['backup'])){
             $tables = array();
             $sql = "SHOW TABLES";
