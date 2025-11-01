@@ -234,7 +234,7 @@ color: #00aeef;
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a href="<?php echo base_url ?>admin/?page=backup" class="nav-link nav-backup">
+                <a href="<?php echo base_url ?>admin/?page=backup/" class="nav-link nav-backup">
                   <i class="nav-icon fa fa-database"></i>
                   <p>
                     Backup Database
