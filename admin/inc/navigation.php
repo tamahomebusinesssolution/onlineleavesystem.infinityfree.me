@@ -123,6 +123,7 @@ color: #00aeef;
                   </p>
                 </a>
               </li>
+              <?php if($_settings->userdata('type') != 1): ?> 
               <?php if($_settings->userdata('position_id') == 2): ?>
                 <li class="nav-item dropdown">
                   <a href="<?php echo base_url ?>admin/?page=expired_coc" class="nav-link nav-expired_coc">
@@ -135,11 +136,13 @@ color: #00aeef;
               <?php endif; ?>
               <?php else: ?>
                 <!-- Creator -->
+
                 <?php if($_settings->userdata('type') != 4): ?> 
                   <!-- Approver -->
                   <?php if($_settings->userdata('type') != 2): ?> 
                     <?php if($_settings->userdata('type') != 5): ?>   
-                      <?php if($_settings->userdata('type') != 9): ?>  
+                      <?php if($_settings->userdata('type') != 9): ?> 
+
                         <li class="nav-item dropdown">
                           <a href="<?php echo base_url ?>admin/?page=employees" class="nav-link nav-employees">
                             <i class="nav-icon fas fa-user-friends"></i>
@@ -181,7 +184,7 @@ color: #00aeef;
                 </a>
               </li>
             <?php endif; ?>
-
+<?php endif; ?>
             <?php if($_settings->userdata('type') == 1): ?>
 
               <li class="nav-item dropdown">
@@ -233,15 +236,16 @@ color: #00aeef;
                   </p>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a href="<?php echo base_url ?>admin/?page=backup/" class="nav-link nav-backup">
                   <i class="nav-icon fa fa-database"></i>
                   <p>
                     Backup Database
                   </p>
                 </a>
-              </li>
+              </li> -->
             <?php endif; ?>
+            <?php if($_settings->userdata('type') != 1): ?>
             <?php if($_settings->userdata('type') != 4): ?> 
               <?php if($_settings->userdata('type') != 5): ?> 
                 <?php if($_settings->userdata('type') != 2): ?>
@@ -286,6 +290,7 @@ color: #00aeef;
                           <?php endif; ?>
                         <?php endif; ?>
                       <?php endif; ?>
+                    <?php endif; ?>
                     <?php endif; ?>
 
 
