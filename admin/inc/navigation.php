@@ -113,7 +113,8 @@ color: #00aeef;
                 </p>
               </a>
             </li> 
-            <?php if($_settings->userdata('type') == 3): ?>
+<?php if($_settings->userdata('type') != 1): ?>            
+<?php if($_settings->userdata('type') == 3): ?>
 
               <li class="nav-item dropdown">
                 <a href="<?php echo base_url ?>admin/?page=employees/records&id=<?php echo $_settings->userdata('id') ?>" class="nav-link nav-records">
@@ -123,7 +124,7 @@ color: #00aeef;
                   </p>
                 </a>
               </li>
-              <?php if($_settings->userdata('position_id') == 2): ?>
+<?php if($_settings->userdata('position_id') == 2): ?>
                 <li class="nav-item dropdown">
                   <a href="<?php echo base_url ?>admin/?page=expired_coc" class="nav-link nav-expired_coc">
                     <i class="nav-icon fa fa-times-circle"></i>
@@ -132,14 +133,14 @@ color: #00aeef;
                     </p>
                   </a>
                 </li>
-              <?php endif; ?>
-              <?php else: ?>
-                <!-- Creator -->
-                <?php if($_settings->userdata('type') != 4): ?> 
-                  <!-- Approver -->
-                  <?php if($_settings->userdata('type') != 2): ?> 
-                    <?php if($_settings->userdata('type') != 5): ?>   
-                      <?php if($_settings->userdata('type') != 9): ?>  
+<?php endif; ?>
+<?php else: ?><!-- 2 -->
+<!-- Creator -->
+<?php if($_settings->userdata('type') != 4): ?> 
+<!-- Approver -->
+<?php if($_settings->userdata('type') != 2): ?> 
+<?php if($_settings->userdata('type') != 5): ?>   
+<?php if($_settings->userdata('type') != 9): ?>  
                         <li class="nav-item dropdown">
                           <a href="<?php echo base_url ?>admin/?page=employees" class="nav-link nav-employees">
                             <i class="nav-icon fas fa-user-friends"></i>
@@ -148,14 +149,15 @@ color: #00aeef;
                             </p>
                           </a>
                         </li>
-                      <?php endif; ?>
-                    <?php endif; ?>
-                  <?php endif; ?>
-                <?php endif; ?>
-              <?php endif; ?>
-              <?php if($_settings->userdata('type') != 4): ?> 
-                <?php if($_settings->userdata('type') != 5): ?> 
-                  <?php if($_settings->userdata('type') != 8): ?>     
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?><!-- 3 -->
+
+<?php if($_settings->userdata('type') != 4): ?> 
+<?php if($_settings->userdata('type') != 5): ?> 
+<?php if($_settings->userdata('type') != 8): ?>     
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=leave_applications" class="nav-link nav-leave_applications">
                         <i class="nav-icon fas fa-file-alt"></i>
@@ -165,12 +167,12 @@ color: #00aeef;
                       </a>
                     </li>
                     
-                  <?php endif; ?>
-                <?php endif; ?>
-              <?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
 
-              <!-- Creator -->
-              <?php if($_settings->userdata('type') == 4 || ($_settings->userdata('type') == 1) || ($_settings->userdata('type') == 5)): ?>
+<!-- Creator -->
+<?php if($_settings->userdata('type') == 4 || ($_settings->userdata('type') == 5)): ?>
 
               <li class="nav-item dropdown">
                 <a href="<?php echo base_url ?>admin/?page=leave_credits" class="nav-link nav-leave_credits">
@@ -180,10 +182,10 @@ color: #00aeef;
                   </p>
                 </a>
               </li>
-            <?php endif; ?>
+<?php endif; ?>
+<?php endif; ?><!-- 1 -->
 
-            <?php if($_settings->userdata('type') == 1): ?>
-
+<?php if($_settings->userdata('type') == 1): ?> 
               <li class="nav-item dropdown">
                 <a href="<?php echo base_url ?>admin/?page=maintenance/department" class="nav-link nav-maintenance_department">
                   <i class="nav-icon fas fa-building"></i>
@@ -241,10 +243,11 @@ color: #00aeef;
                   </p>
                 </a>
               </li> -->
-            <?php endif; ?>
-            <?php if($_settings->userdata('type') != 4): ?> 
-              <?php if($_settings->userdata('type') != 5): ?> 
-                <?php if($_settings->userdata('type') != 2): ?>
+<?php endif; ?>
+<?php if($_settings->userdata('type') != 1): ?>
+<?php if($_settings->userdata('type') != 4): ?> 
+<?php if($_settings->userdata('type') != 5): ?> 
+<?php if($_settings->userdata('type') != 2): ?>
 
                   <div id="productmenu">
                     <div class="submenublock" id="submenu1">
@@ -261,7 +264,7 @@ color: #00aeef;
                               <p>Credit Leave Report</p>
                             </a>
                           </li>
-                          <?php if($_settings->userdata('type') != 3): ?>
+<?php if($_settings->userdata('type') != 3): ?>
                             <li class="nav-item dropdown">
                               <a href="<?php echo base_url ?>admin/?page=reports/employee_list" class="nav-link nav-reports_employee_list">
                                 <p>List of Employee</p>
@@ -282,11 +285,11 @@ color: #00aeef;
                                 <p>Application Leave Report</p>
                               </a>
                             </li>
-
-                          <?php endif; ?>
-                        <?php endif; ?>
-                      <?php endif; ?>
-                    <?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php endif; ?>
 
 
                     
